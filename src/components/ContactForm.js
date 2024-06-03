@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     message: '',
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -35,7 +37,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact">
+    <div className="contact-form-container">
       <form className="contact-form" onSubmit={handleSubmit}>
         <div>
           <label className="label">Email:</label>
@@ -60,7 +62,8 @@ const ContactForm = () => {
         </div>
         <button type="submit" className="button">Wyślij</button>
       </form>
-    </section>
+      <button className="return-main-button" onClick={() => navigate('/')}>Return to Main</button>
+    </div>
   );
 };
 

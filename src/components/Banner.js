@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.jpg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { useNavigate } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -13,6 +14,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Administrator", "IT Specialist", "Bodybuilder"];
   const period = 2000;
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -52,10 +54,7 @@ export const Banner = () => {
   };
 
   const handleConnectClick = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate("/contact");
   };
 
   return (
@@ -72,9 +71,6 @@ export const Banner = () => {
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <button onClick={handleConnectClick}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
                 </div>
               )}
             </TrackVisibility>
