@@ -35,30 +35,32 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-      <div>
-        <label className="label">Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          className="input"
-          required
-        />
-      </div>
-      <div>
-        <label className="label">Message:</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          className="textarea"
-          required
-        />
-      </div>
-      <button type="submit" className="button">Wyślij</button>
-    </form>
+    <section id="contact">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div>
+          <label className="label">Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="input"
+            required
+          />
+        </div>
+        <div>
+          <label className="label">Message:</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="textarea"
+            required
+          />
+        </div>
+        <button type="submit" className="button">Wyślij</button>
+      </form>
+    </section>
   );
 };
 

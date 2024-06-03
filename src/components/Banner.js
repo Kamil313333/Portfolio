@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "Bodybuilder"];
+  const toRotate = ["Administrator", "IT Specialist", "Bodybuilder"];
   const period = 2000;
 
   useEffect(() => {
@@ -51,30 +51,28 @@ export const Banner = () => {
     }
   };
 
+  const handleConnectClick = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h1>
                     {`Hi! I'm Kamil`}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "Bodybuilder" ]'
-                    >
+                    <span className="txt-rotate" data-period="1000" data-rotate={JSON.stringify(toRotate)}>
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <button onClick={() => console.log("connect")}>
+                  <button onClick={handleConnectClick}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
                 </div>
@@ -84,11 +82,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img" />
                 </div>
               )}
