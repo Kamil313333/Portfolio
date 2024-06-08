@@ -1,1 +1,1 @@
-![1](portfolio/scr1.png)
+![1](scr1.png)
