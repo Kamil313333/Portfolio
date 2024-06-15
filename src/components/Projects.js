@@ -38,7 +38,7 @@ export const Projects = () => {
     {
       title: "New Project 3",
       description: "Design & Development",
-      imgUrl: projImg2, // Przykładowe wykorzystanie wcześniej zdefiniowanego zdjęcia
+      imgUrl: projImg2, 
     },
   ];
 

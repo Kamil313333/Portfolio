@@ -3,9 +3,9 @@ import React from 'react';
 const Experience = () => {
     const experiences = [
         {
-            title: 'Software Engineer',
-            company: 'TechCorp',
-            duration: 'Jan 2020 - Present',
+            title: 'Student',
+            company: 'Warsaw University of Technology',
+            duration: 'October 2018 - May 2023',
             description: 'Developed and maintained web applications using React and Node.js.'
         },
         {

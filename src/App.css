@@ -232,7 +232,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
   padding: 260px 0 100px 0;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
@@ -240,16 +239,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   position: relative;
 }
-.banner .tagline {
+
+.banner .banner-text {
+  margin-right: 30px; /* Margines odstępu między tekstem a zdjęciem */
+  padding-bottom: 20px; /* Dodatkowy odstęp na dole tekstu */
+  color: #ffffff; /* Kolor tekstu */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień tekstu */
+  font-size: 48px; /* Rozmiar czcionki */
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
+  line-height: 1.2;
 }
+
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
@@ -258,49 +259,73 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+
 .banner p {
-  color: #ffffff;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  width: 96%;
 }
+
 .banner button {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 20px;
   letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  background: none;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  cursor: pointer;
 }
-.banner button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
+
+.banner button:hover {
+  background: #fff;
+  color: #000;
 }
-.banner button:hover svg {
-  margin-left: 25px;
-}
+
 .banner img {
   animation: updown 3s linear infinite;
 }
+
 @keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
+.txt-rotate > .wrap {
+  display: inline-block;
+}
+
+.custom-tech-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.custom-tech-table th,
+.custom-tech-table td {
+  padding: 10px;
+  text-align: center;
+  background-color: #1b4f84 !important;/* kolor tła komórek */
+  color: #ffffff !important; /* kolor tekstu w komórkach */
+}
+
+.custom-tech-table th {
+  background-color: #343a40; /* kolor tła nagłówków */
+  color: #ffffff; /* kolor tekstu w nagłówkach */
+}
+
+.custom-tech-table tbody tr:hover {
+  background-color: #dee2e6; /* kolor tła wiersza po najechaniu myszką */
+}
 
 /************ Projects Css ************/
 .project {
