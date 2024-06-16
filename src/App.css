@@ -244,7 +244,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-right: 30px; /* Margines odstępu między tekstem a zdjęciem */
   padding-bottom: 20px; /* Dodatkowy odstęp na dole tekstu */
   color: #ffffff; /* Kolor tekstu */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień tekstu */
+  text-shadow: 2px 2px 4px rgba(149, 49, 49, 0.5); /* Cień tekstu */
   font-size: 48px; /* Rozmiar czcionki */
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -300,33 +300,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-.txt-rotate > .wrap {
-  display: inline-block;
-}
-
-.custom-tech-table {
+.custom-tech-table-container .custom-tech-table {
   width: 100%;
-  margin-top: 20px;
+  border: 1px solid #000000;
   border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: transparent;
 }
 
-.custom-tech-table th,
-.custom-tech-table td {
+.custom-tech-table-container .custom-tech-table th,
+.custom-tech-table-container .custom-tech-table td {
   padding: 10px;
+  text-align: left;
+  border: 1px solid #000000;
+  color: #000000; /* Kolor tekstu dla wszystkich komórek */
+}
+
+.custom-tech-table-container .custom-tech-table thead th {
+  background-color: #000000; /* Kolor tła dla nagłówków */
+  color: #ffffff; /* Kolor tekstu dla nagłówków */
   text-align: center;
-  background-color: #1b4f84 !important;/* kolor tła komórek */
-  color: #ffffff !important; /* kolor tekstu w komórkach */
+  padding: 10px;
 }
 
-.custom-tech-table th {
-  background-color: #343a40; /* kolor tła nagłówków */
-  color: #ffffff; /* kolor tekstu w nagłówkach */
+.custom-tech-table-container .custom-tech-table tbody tr {
+  background-color: #ffffff; /* Kolor tła dla wszystkich wierszy */
 }
 
-.custom-tech-table tbody tr:hover {
-  background-color: #dee2e6; /* kolor tła wiersza po najechaniu myszką */
+.custom-tech-table-container .custom-tech-table tbody tr:nth-child(even) {
+  background-color: #f0f0f0; /* Kolor tła co drugiego wiersza */
 }
-
 /************ Projects Css ************/
 .project {
   padding: 80px 0;

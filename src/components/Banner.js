@@ -48,7 +48,7 @@ const Banner = () => {
   }, [delta, tick]);
 
   const techStack = [
-    { technology: "React.js", proficiency: "Intermediate" },
+    { technology: "React.js", proficiency: "Proficient" },
     { technology: "Node.js", proficiency: "Advanced" },
     { technology: "JavaScript", proficiency: "Advanced" },
     { technology: "HTML/CSS", proficiency: "Intermediate" },
@@ -57,7 +57,9 @@ const Banner = () => {
     { technology: "Active Directory", proficiency: "Advanced" },
     { technology: "PowerShell", proficiency: "Intermediate" },
     { technology: "VMware", proficiency: "Intermediate" },
-    // Add more technologies as needed
+    { technology: "Python", proficiency: "Intermediate" },
+    { technology: "SQL", proficiency: "Proficient" },
+    { technology: "Git", proficiency: "Intermediate" },
   ];
 
   return (
@@ -79,23 +81,25 @@ const Banner = () => {
             </TrackVisibility>
             <Row className="mt-5">
               <Col>
-                <h2>Tech Stack & Skills</h2>
-                <Table striped bordered hover className="custom-tech-table">
-                  <thead>
-                    <tr>
-                      <th>Technology</th>
-                      <th>Proficiency</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {techStack.map((item, index) => (
-                      <tr key={index}>
-                        <td>{item.technology}</td>
-                        <td>{item.proficiency}</td>
+                <div className="custom-tech-table-container">
+                  <h2>Tech Stack</h2>
+                  <Table striped bordered hover className="custom-tech-table">
+                    <thead>
+                      <tr>
+                        <th>Technology</th>
+                        <th>Proficiency</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </Table>
+                    </thead>
+                    <tbody>
+                      {techStack.map((item, index) => (
+                        <tr key={index}>
+                          <td>{item.technology}</td>
+                          <td>{item.proficiency}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                </div>
               </Col>
             </Row>
           </Col>
