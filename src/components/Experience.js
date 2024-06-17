@@ -6,15 +6,14 @@ const Experience = () => {
             title: 'Student',
             company: 'Warsaw University of Technology',
             duration: 'October 2018 - May 2023',
-            description: 'Developed and maintained web applications using React and Node.js.'
+            description: 'learning IT skills and training to become a Polish army officer'
         },
         {
-            title: 'Web Developer',
-            company: 'WebSolutions',
-            duration: 'Jun 2018 - Dec 2019',
-            description: 'Built responsive websites and web applications using HTML, CSS, and JavaScript.'
+            title: 'Administrator',
+            company: 'Ministerstwo Obrony Narodowej',
+            duration: 'May 2023 - Current',
+            description: 'Admnistration of military systems'
         },
-        // Dodaj więcej doświadczeń według potrzeb
     ];
 
     return (
