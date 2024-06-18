@@ -51,3 +51,5 @@ export const NavBar = ({ onScrollTo }) => {
     </Navbar>
   );
 };
+
+export default NavBar;
