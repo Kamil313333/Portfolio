@@ -1,3 +1,20 @@
+### To intsall all the required dependecies
+
+```
+npm install
+```
+
+## Start the project
+
+```
+npm start
+```
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### About the project
+
 Hello!
 
 I'd like to present my portfolio, which is a dynamic website built using React. I've utilized various modern technologies and libraries to make the site interactive and visually appealing.
@@ -14,6 +31,7 @@ The projects section showcases my work through interactive cards. I've used Reac
 
 The entire site is built using HTML, CSS, and JavaScript, allowing me precise control over its appearance and functionality.
 
+### Screenshots
 
 
 ![1](scr1.png)
