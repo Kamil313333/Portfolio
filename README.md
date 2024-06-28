@@ -13,8 +13,6 @@ npm start
 
 ### About the project
 
-Hello!
-
 I'd like to present my portfolio, which is a dynamic website built using React. I've utilized various modern technologies and libraries to make the site interactive and visually appealing.
 
 The contact form is a key component of my project. It uses React Hooks for state management and integrates with EmailJS, allowing users to send emails directly from the website. This makes it easy for visitors to get in touch with me.
